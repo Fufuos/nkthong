@@ -1,0 +1,77 @@
+---
+import Arrow from "@assets/Arrow.svg";
+
+interface Props {
+  startDate: string;
+  endDate: string;
+  role: string;
+  company: string;
+  href: string;
+  description: string;
+  technologies: string[];
+}
+
+const { startDate, endDate, role, company, href, description, technologies } =
+  Astro.props;
+---
+
+<li class="mb-12">
+  <div
+    class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50"
+  >
+    <!-- Hover Background Highlight -->
+    <div
+      class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+    >
+    </div>
+
+    <!-- Date Header -->
+    <header
+      class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 whitespace-nowrap"
+    >
+      {startDate} — {endDate}
+    </header>
+
+    <!-- Content Area -->
+    <div class="z-10 sm:col-span-6">
+      <h3 class="font-medium leading-snug text-slate-200">
+        <a
+          href={href}
+          class="inline-flex items-baseline font-medium leading-tight text-slate-200 group/link text-base focus-visible:text-teal-300"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${role} at ${company} (opens in new tab)`}
+        >
+          <span
+            class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+          ></span>
+          <span>
+            {role}
+            <span class="inline-block">
+              &nbsp;·&nbsp;{company}
+              <Arrow
+                class="inline-block h-4 w-4 shrink-0 text-white transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+              />
+            </span>
+          </span>
+        </a>
+      </h3>
+
+      <p class="mt-2 text-sm leading-normal text-slate-400">
+        {description}
+      </p>
+
+      <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+        {
+          technologies.map((tech) => (
+            <li class="mr-1.5 mt-2">
+              <span class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+                {tech}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</li>

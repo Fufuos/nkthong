@@ -1,8 +1,53 @@
 ---
 import SectionWrapper from "./SectionWrapper.astro";
+import RoleComponent from "./RoleComponent.astro";
+
+// startDate: string;
+// endDate: string;
+// role: string;
+// company: string;
+// href: string;
+// description: string;
+// technologies: string[];
+
+const experiences = [
+  {
+    startDate: "Nov. 2025",
+    endDate: "Oct. 2026",
+    role: "DevOps Engineer Intern",
+    company: "Silpa Companies LLC",
+    href: "https://silpacompanies.com/",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    technologies: ["technologi 1", "technologi 2", "technologi 3"],
+  },
+  {
+    startDate: "Mar. 2025",
+    endDate: "Nov. 2026",
+    role: "Full-Stack Engineer Intern",
+    company: "Artisan Technologies",
+    href: "https://www.artisanautomation.co/",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    technologies: ["technologi 1", "technologi 3"],
+  },
+];
 ---
 
 <SectionWrapper id="experience" aria-label="Work experience">
-  <h2 class="text-2xl font-bold">experience</h2>
-  <p1>experience</p1>
+  <div
+    class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+  >
+    <h2
+      class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
+    >
+      Experience
+    </h2>
+  </div>
+
+  <div>
+    <ol class="group/list">
+      {experiences.map((experience) => <RoleComponent {...experience} />)}
+    </ol>
+  </div>
 </SectionWrapper>

@@ -1,0 +1,51 @@
+---
+import GithubIcon from "@assets/Github.svg";
+import LinkedInIcon from "@assets/LinkedIn.svg";
+import ResumeIcon from "@assets/Resume.svg";
+---
+
+<ul class="ml-1 mt-8 flex items-center gap-5" aria-label="Social links">
+  <!-- Resume Button -->
+  <li class="shrink-0">
+    <a
+      href="/Nicholas_Thong_Resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Resume (opens in new tab)"
+      class="inline-flex items-center gap-2 rounded-md border border-slate-700 bg-slate-800/50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-200 transition-all hover:border-teal-400/50 hover:bg-slate-800 hover:text-teal-300"
+    >
+      <ResumeIcon class="h-4 w-4 shrink-0" />
+      <span>Resume</span>
+    </a>
+  </li>
+
+  <!-- GitHub -->
+  <li class="shrink-0">
+    <a
+      href="https://www.github.com/fufuos"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub (opens in new tab)"
+      class="block text-slate-400 transition-colors hover:text-slate-200"
+      title="GitHub"
+    >
+      <span class="sr-only">GitHub</span>
+      <GithubIcon class="h-6 w-6" />
+    </a>
+  </li>
+
+  <!-- LinkedIn -->
+  <li class="shrink-0">
+    <a
+      href="https://www.linkedin.com/in/nthong"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn (opens in new tab)"
+      class="block text-slate-400 transition-colors hover:text-slate-200"
+      title="LinkedIn"
+    >
+      <span class="sr-only">LinkedIn</span>
+      <LinkedInIcon class="h-6 w-6" />
+    </a>
+  </li>
+</ul>

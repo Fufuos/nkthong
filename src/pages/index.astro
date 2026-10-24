@@ -3,7 +3,9 @@ import Layout from "@layouts/Layout.astro";
 import About from "@components/About.astro";
 import Projects from "@components/Projects.astro";
 import Experience from "@components/Experience.astro";
+import Hero from "@components/Hero.astro";
 import Navbar from "@components/Navbar.astro";
+import SocialLinks from "@components/SocialLinks.astro";
 ---
 
 <Layout>
@@ -12,17 +14,16 @@ import Navbar from "@components/Navbar.astro";
   >
     <div class="lg:flex lg:justify-between lg:gap-4">
       <header
-        class="bg-lime-300 sticky top-0 flex max-h-screen w-[48%] flex-col justify-between py-24"
+        class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
       >
         <div>
-          <h1 class="text-4xl font-bold tracking-tight">
-            <a href="/">Nicholas Thong</a>
-          </h1>
+          <Hero />
           <Navbar />
+          <SocialLinks />
         </div>
       </header>
 
-      <main class="bg-yellow-100 pt-24 w-[52%] py-24">
+      <main class="pt-24 w-[52%] py-24">
         <div>
           <About />
           <Experience />
