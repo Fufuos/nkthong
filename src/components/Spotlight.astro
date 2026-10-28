@@ -1,0 +1,39 @@
+<div id="spotlight"></div>
+
+<style>
+  #spotlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 30;
+    background: radial-gradient(
+      600px at 50% 20%,
+      rgba(29, 78, 216, 0.15),
+      transparent 60%
+    );
+  }
+
+  @media (pointer: coarse) {
+    #spotlight {
+      opacity: 0.7;
+    }
+  }
+</style>
+
+<script>
+  const spotlightEl = document.querySelector("#spotlight") as HTMLElement;
+
+  if (spotlightEl) {
+    const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+
+    if (hasFinePointer) {
+      window.addEventListener("mousemove", (e) => {
+        const { clientX, clientY } = e;
+        spotlightEl.style.background = `radial-gradient(600px at ${clientX}px ${clientY}px, rgba(29, 78, 216, 0.15), transparent 60%)`;
+      });
+    }
+  }
+</script>

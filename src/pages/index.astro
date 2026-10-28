@@ -1,30 +1,35 @@
 ---
-import Layout from "@layouts/Layout.astro";
 import About from "@components/About.astro";
-import Projects from "@components/Projects.astro";
 import Experience from "@components/Experience.astro";
 import Hero from "@components/Hero.astro";
 import Navbar from "@components/Navbar.astro";
-import SocialLinks from "@components/SocialLinks.astro";
+import Links from "@components/Links.astro";
+import Projects from "@components/Projects.astro";
+import Spotlight from "@components/Spotlight.astro";
+
+import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
   <div
     class="mx-auto min-h-screen max-w-7xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0"
   >
+    <Spotlight />
     <div class="lg:flex lg:justify-between lg:gap-4">
+      <!-- Left column -->
       <header
         class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
       >
         <div>
           <Hero />
           <Navbar />
-          <SocialLinks />
+          <Links />
         </div>
       </header>
 
-      <main class="pt-24 w-[52%] py-24">
-        <div>
+      <!-- Right column -->
+      <main class="pt-24 lg:w-[52%] lg:py-24">
+        <div class="lg:gap-y-15 lg:grid">
           <About />
           <Experience />
           <Projects />
@@ -32,4 +37,4 @@ import SocialLinks from "@components/SocialLinks.astro";
       </main>
     </div>
   </div>
-</Layout>;
+</Layout>

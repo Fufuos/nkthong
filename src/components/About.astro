@@ -3,39 +3,38 @@ import SectionWrapper from "./SectionWrapper.astro";
 ---
 
 <SectionWrapper id="about" aria-label="About me">
-  <div>
-    <h2 class="text-2xl font-bold">About</h2>
+  <!-- Mobile Header -->
+  <div
+    class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+  >
+    <h2
+      class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
+    >
+      About
+    </h2>
   </div>
 
-  <div>
-    <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+  <div class="text-slate-400 space-y-4">
+    <!-- Credentials -->
+    <p>
+      Welcome to my personal website! I'm a software engineer based out of
+      <b class="text-slate-200"> Houston, Texas</b>. I'm also a University of
+      Houston graduate with a B.S. in Computer Science.
     </p>
-
-    <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+    <!-- Currently Pursuing -->
+    <p>
+      I have foundations in full-stack web applications with a growing passion
+      for infrastructure, automation, and developer tools. I've previously
+      worked in the healthcare, data analytics, and automation industry. I'm
+      currently learning how to use cloud technologies such as Azure and DevOps
+      best practices.
     </p>
-
-    <p class="mb-4">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
+    <!-- Hobby  -->
+    <p>
+      When I'm not on my computer, you can find me at the gym, running, or
+      planning my next adventure. I also love to tinker and fix secondhand
+      items! I'm curious how things work behind the scenes, and have fixed many
+      household electronics and even worked on small engines like generators!
     </p>
   </div>
 </SectionWrapper>
