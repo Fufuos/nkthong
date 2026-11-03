@@ -1,0 +1,26 @@
+<div id="grid"></div>
+
+<style>
+  #grid {
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: -10;
+    background-color: #0f172a; /* bg-slate-900 */
+    background-image: radial-gradient(#334155 1px, transparent 1px);
+    background-size: 3rem 3rem;
+    /* Soft radial mask to fade out the edges */
+    mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 0%,
+      #000 75%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse 80% 80% at 50% 0%,
+      #000 75%,
+      transparent 100%
+    );
+  }
+</style>
