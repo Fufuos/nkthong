@@ -5,6 +5,8 @@
 > Rewritten using **Bun**, **Astro**, and **Tailwind CSS**. \
 > Heavily inspired by [brittanychiang.com](https://brittanychiang.com/) (originally built with Next.js).
 
+![Website preview](/public/projects/nkthong.png)
+
 ## 📂 Project Structure
 
 Inside of this project, you'll see the following folders and files:
