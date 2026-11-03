@@ -1,34 +1,57 @@
 ---
 import SectionWrapper from "./SectionWrapper.astro";
+import ProjectComponent from "./ProjectComponent.astro";
+
+const projects = [
+  {
+    title: "Git-Ai-Commit",
+    description:
+      "Command-line tool for generating automated commit messages for Git repositories written in Golang.",
+    href: "https://github.com/Fufuos/git-ai-commit",
+    thumbnail: "/projects/github.png",
+  },
+  {
+    title: "Portfolio Website",
+    description: "The one you're viewing at this very moment!",
+    href: "https://www.nkthong.com",
+    thumbnail: "/projects/nkthong.png",
+  },
+  {
+    title: "hush",
+    description: "A private key vault command-line tool for managing secrets.",
+    href: "https://github.com/Fufuos/hush",
+    thumbnail: "/projects/github.png",
+  },
+];
 ---
 
 <SectionWrapper id="projects" aria-label="Selected projects">
-  <h2 class="text-2xl font-bold">Projects</h2>
-  <p1>projects</p1>
-  <p2>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p2>
+  <div
+    class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0"
+  >
+    <h2
+      class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
+    >
+      Projects
+    </h2>
+  </div>
+
+  <div>
+    <ol class="group/list">
+      {
+        projects.map((project) => (
+          <ProjectComponent
+            title={project.title}
+            description={project.description}
+            href={project.href}
+            thumbnail={project.thumbnail}
+          />
+        ))
+      }
+    </ol>
+  </div>
+
+  <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200">
+    View project archive (coming soon)
+  </h2>
 </SectionWrapper>

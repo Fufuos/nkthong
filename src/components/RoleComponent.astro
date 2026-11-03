@@ -6,7 +6,7 @@ interface Props {
   endDate: string;
   role: string;
   company: string;
-  href: string;
+  href?: string;
   description: string;
   technologies: string[];
 }
@@ -49,9 +49,11 @@ const { startDate, endDate, role, company, href, description, technologies } =
             {role}
             <span class="inline-block">
               &nbsp;·&nbsp;{company}
-              <Arrow
-                class="inline-block h-4 w-4 shrink-0 text-white transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
-              />
+              {
+                href && (
+                  <Arrow class="inline-block h-4 w-4 shrink-0 text-white transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
+                )
+              }
             </span>
           </span>
         </a>
@@ -65,7 +67,7 @@ const { startDate, endDate, role, company, href, description, technologies } =
         {
           technologies.map((tech) => (
             <li class="mr-1.5 mt-2">
-              <span class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+              <span class="flex items-center rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-medium leading-5 text-indigo-300">
                 {tech}
               </span>
             </li>
