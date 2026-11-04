@@ -34,9 +34,16 @@ nkthong/
 
 ## 🚀🛠️ Deploy
 
+This project is currently being hosted on [vercel](https://www.vercel.com).
+
+To get the project running locally:
+
+```bash
+$ bun install
+$ bun dev
 ```
-insert instructions here
-```
+
+Afterwards, happy developing!
 
 ## 🧑‍💻 Commands
 
