@@ -13,32 +13,28 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
-  <div
-    class="mx-auto min-h-screen max-w-7xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0"
-  >
-    <Background />
-    <Spotlight />
-    <div class="lg:flex lg:justify-between lg:gap-4">
-      <!-- Left column -->
-      <header
-        class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
-      >
-        <div>
-          <Hero />
-          <Navbar />
-          <Links />
-        </div>
-      </header>
+  <Background />
+  <Spotlight />
+  <div class="lg:flex lg:justify-between lg:gap-4">
+    <!-- Left column -->
+    <header
+      class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
+    >
+      <div>
+        <Hero />
+        <Navbar />
+        <Links />
+      </div>
+    </header>
 
-      <!-- Right column -->
-      <main class="pt-24 lg:w-[52%] lg:py-24">
-        <div class="lg:gap-y-15 lg:grid">
-          <About />
-          <Experience />
-          <Projects />
-          <Footer />
-        </div>
-      </main>
-    </div>
+    <!-- Right column -->
+    <main class="pt-24 lg:w-[52%] lg:py-24">
+      <div class="lg:gap-y-15 lg:grid">
+        <About />
+        <Experience />
+        <Projects />
+        <Footer />
+      </div>
+    </main>
   </div>
 </Layout>

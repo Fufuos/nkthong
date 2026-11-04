@@ -1,28 +1,7 @@
 ---
 import SectionWrapper from "./SectionWrapper.astro";
 import ProjectComponent from "./ProjectComponent.astro";
-
-const projects = [
-  {
-    title: "Git-Ai-Commit",
-    description:
-      "Command-line tool for generating automated commit messages for Git repositories written in Golang.",
-    href: "https://github.com/Fufuos/git-ai-commit",
-    thumbnail: "/projects/github.png",
-  },
-  {
-    title: "Portfolio Website",
-    description: "The one you're viewing at this very moment!",
-    href: "https://github.com/Fufuos/nkthong",
-    thumbnail: "/projects/nkthong.png",
-  },
-  {
-    title: "hush",
-    description: "A private key vault command-line tool for managing secrets.",
-    href: "https://github.com/Fufuos/hush",
-    thumbnail: "/projects/github.png",
-  },
-];
+import { projects } from "../pages/projects.astro";
 ---
 
 <SectionWrapper id="projects" aria-label="Selected projects">
@@ -39,19 +18,21 @@ const projects = [
   <div>
     <ol class="group/list">
       {
-        projects.map((project) => (
-          <ProjectComponent
-            title={project.title}
-            description={project.description}
-            href={project.href}
-            thumbnail={project.thumbnail}
-          />
-        ))
+        projects
+          .slice(0, 3)
+          .map((project) => (
+            <ProjectComponent
+              title={project.title}
+              description={project.description}
+              href={project.href}
+              thumbnail={project.thumbnail}
+            />
+          ))
       }
     </ol>
   </div>
 
   <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200">
-    View project archive (coming soon)
+    <a href="/projects"> View all projects </a>
   </h2>
 </SectionWrapper>

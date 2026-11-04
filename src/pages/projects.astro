@@ -1,0 +1,85 @@
+---
+import Background from "@components/Background.astro";
+import Spotlight from "@components/Spotlight.astro";
+import Layout from "@layouts/Layout.astro";
+import ProjectComponent from "@components/ProjectComponent.astro";
+import Arrow from "@assets/Arrow.svg";
+
+export const projects = [
+  {
+    title: "Git-Ai-Commit",
+    description:
+      "Command-line tool for generating automated commit messages for Git repositories written in Golang.",
+    href: "https://github.com/Fufuos/git-ai-commit",
+    thumbnail: "/projects/github.png",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "The one you're viewing at this very moment! Built with Bun, Astro, and TailwindCSS.",
+    href: "https://github.com/Fufuos/nkthong",
+    thumbnail: "/projects/nkthong.png",
+  },
+  {
+    title: "hush",
+    description: "A private key vault command-line tool for managing secrets.",
+    href: "https://github.com/Fufuos/hush",
+    thumbnail: "/projects/github.png",
+  },
+  {
+    title: "Personal Website (Old)",
+    description:
+      "My very first personal website, built with HTML, CSS, and JavaScript.",
+    href: "https://github.com/Fufuos/portfolio",
+    thumbnail: "/projects/github.png",
+  },
+  {
+    title: "Resume Builder",
+    description:
+      "LaTeX resume builder that generates a PDF resume for engineering roles.",
+    href: "https://github.com/Fufuos/Resume",
+    thumbnail: "/projects/resume.png",
+  },
+  {
+    title: "Discord-Clone",
+    description:
+      "Functional fullstack project using Next.js 13, React, Typescript, Socket.io, Prisma, Tailwind, MySQL.",
+    href: "https://github.com/Fufuos/hush",
+    thumbnail: "/projects/github.png",
+  },
+];
+---
+
+<Layout>
+  <Background />
+  <Spotlight />
+
+  <div class="lg:py-24">
+    <a
+      class="group mb-2 text-indigo-400 inline-flex font-semibold leading-tight hover:text-indigo-200 items-center"
+      href="/"
+    >
+      <Arrow
+        class="mr-1 h-4 w-4 rotate-225 transition-transform group-hover:-translate-x-2"
+      /> Nicholas Thong
+    </a>
+    <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+      All Projects
+    </h1>
+
+    <div class="mt-12 w-full">
+      <ol class="group/list">
+        {
+          projects.map((project) => (
+            <ProjectComponent
+              title={project.title}
+              description={project.description}
+              href={project.href}
+              thumbnail={project.thumbnail}
+            />
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</Layout>
