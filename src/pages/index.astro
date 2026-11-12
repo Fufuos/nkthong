@@ -1,6 +1,5 @@
 ---
 import About from "@components/About.astro";
-import Background from "@components/Background.astro";
 import Experience from "@components/Experience.astro";
 import Footer from "@components/Footer.astro";
 import Hero from "@components/Hero.astro";
@@ -13,14 +12,13 @@ import Layout from "@layouts/Layout.astro";
 ---
 
 <Layout>
-  <Background />
   <Spotlight />
   <div class="lg:flex lg:justify-between lg:gap-4">
     <!-- Left column -->
     <header
       class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24"
     >
-      <div>
+      <div class="pt-12 lg:pt-0">
         <Hero />
         <Navbar />
         <Links />
